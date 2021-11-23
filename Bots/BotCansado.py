@@ -1,16 +1,16 @@
 from Bots.Bot import Bot
 
-class BotZangado(Bot):
+class BotCansado(Bot):
     def __init__(self,nome):
         self.__nome = nome
 
-    #nao esquecer o decorator
+    @property
     def nome(self):
-        pass
+        return self.__nome
 
-    #nao esquecer o decorator
-    def nome(nome):
-        pass
+    @nome.setter
+    def nome(self, novo_nome):
+        self.__nome = novo_nome
 
     def apresentacao(self):
         pass

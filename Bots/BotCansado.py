@@ -12,8 +12,9 @@ class BotCansado(Bot):
     def nome(self, novo_nome):
         self.__nome = novo_nome
 
-    def apresentacao(self):
-        pass
+    def apresentacao_Cansado(self):
+        mensagem = "Olá, pronto para o próximo comando."
+        print(mensagem)
  
     def mostra_comandos(self):
         pass

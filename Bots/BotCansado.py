@@ -18,7 +18,19 @@ class BotCansado(Bot):
         print(mensagem)
  
     def mostra_comandos(self):
-        pass
+        comandos = {
+                "1": "Apresentar",
+                "2": "Mostrar um conselho",
+                "3": "Sair"
+                }
+        numero_de_comandos = len(comandos)
+        mensagem = ""
+        for numero, texto in comandos.items():
+            mensagem += f"{numero} - {texto}"
+            tem_proxima_linha = numero != numero_de_comandos
+            if tem_proxima_linha:
+                mensagem += "\n"
+        print(mensagem)
     
     def executa_comando(self,cmd):
         pass

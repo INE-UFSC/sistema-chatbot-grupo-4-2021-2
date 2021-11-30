@@ -33,12 +33,16 @@ class BotCansado(Bot):
         return mensagem
     
     def executa_comando(self,cmd):
+        mensagem = ""
+
         if cmd == "1":
-            self.apresentacao_Cansado()
+            mensagem = self.apresentacao_Cansado()
         elif cmd == "2":
-            self.mostra_conselho()
+            mensagem = self.mostra_conselho()
         elif cmd == "3":
-            self.despedida()
+            mensagem = self.despedida()
+
+        return mensagem
 
     def boas_vindas(self):
         mensagem = "Seja bem-vindo(a)."

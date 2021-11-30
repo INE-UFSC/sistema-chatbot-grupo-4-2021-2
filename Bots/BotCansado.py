@@ -21,7 +21,7 @@ class BotCansado(Bot):
         comandos = {
                 "1": "Apresentar",
                 "2": "Mostrar um conselho",
-                "3": "Sair"
+                "3": "Mostrar despedida"
                 }
         numero_de_comandos = len(comandos)
         mensagem = ""

@@ -4,6 +4,13 @@ class SistemaChatBot:
     def __init__(self,nomeEmpresa,lista_bots):
         self.__empresa=nomeEmpresa
         ##verificar se a lista de bots contém apenas bots
+        for elemento in lista_bots:
+            tem_tipo_bot = isinstance(elemento, Bot)
+            if not tem_tipo_bot:
+                mensagem_de_erro = ("Elemento de tipo diferente. A lista de"
+                        + " bots deve conter somente instâncias de classes"
+                        + " derivadas de Bot.")
+                raise Exception(mensagem_de_erro)
         self.__lista_bots = lista_bots
         self.__bot = None
     

@@ -43,6 +43,10 @@ class SistemaChatBot:
         mensagem_com_nome = self.__bot.nome + " diz: " + mensagem
         return mensagem_com_nome
 
+    def imprimir_mensagem_com_nome_do_bot(self, mensagem):
+        mensagem_com_nome = self.adiciona_nome_do_bot_na_mensagem(mensagem)
+        print(mensagem_com_nome)
+
     def inicio(self):
         self.boas_vindas()
         self.mostra_menu()

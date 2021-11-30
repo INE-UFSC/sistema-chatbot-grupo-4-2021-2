@@ -12,9 +12,7 @@ class SistemaChatBot:
 
     def mostra_menu(self):
         for i in range(len(self.__lista_bots)):
-            print(f'{i + 1}) Escolher bot {self.__lista_bots[i].nome} mensagem de apresentação:', end='')
-            self.__lista_bots[i].boas_vindas()
-            print()
+            print(f'{i + 1}) Escolher bot {self.__lista_bots[i].nome} mensagem de apresentação: {self.__lista_bots[i].boas_vindas()}')
         ##mostra o menu de escolha de bots
     
     def escolhe_bot(self):
@@ -33,7 +31,7 @@ class SistemaChatBot:
         return False
     def mostra_comandos_bot(self):
         print('Digite -1 para sair.')
-        self.__bot.mostra_comandos()
+        print(self.__bot.mostra_comandos())
 
     def le_envia_comando(self):
         escolha = input('Escolha alguma opção: ').strip()
@@ -45,13 +43,13 @@ class SistemaChatBot:
         self.boas_vindas()
         self.mostra_menu()
         self.escolhe_bot()
-        self.__bot.boas_vindas()
+        print(self.__bot.boas_vindas())
         tem_que_continuar = True
         while tem_que_continuar:
             self.mostra_comandos_bot()
             escolha = self.le_envia_comando()
             tem_que_continuar = escolha != '-1'
-        self.__bot.despedida()
+        print(self.__bot.despedida())
         ##mostra mensagem de boas-vindas do sistema
         ##mostra o menu ao usuário
         ##escolha do bot      

@@ -15,7 +15,7 @@ class BotCansado(Bot):
 
     def apresentacao_Cansado(self):
         mensagem = "Olá, pronto para o próximo comando."
-        print(mensagem)
+        return mensagem
  
     def mostra_comandos(self):
         comandos = {
@@ -30,7 +30,7 @@ class BotCansado(Bot):
             tem_proxima_linha = numero != numero_de_comandos
             if tem_proxima_linha:
                 mensagem += "\n"
-        print(mensagem)
+        return mensagem
     
     def executa_comando(self,cmd):
         if cmd == "1":
@@ -42,11 +42,11 @@ class BotCansado(Bot):
 
     def boas_vindas(self):
         mensagem = "Seja bem-vindo(a)."
-        print(mensagem)
+        return mensagem
 
     def despedida(self):
         mensagem = "Foi um prazer. Volte sempre."
-        print(mensagem)
+        return mensagem
     
     def mostra_conselho(self):
         conselhos = (
@@ -60,5 +60,5 @@ class BotCansado(Bot):
                 )
         indice_aleatorio = randint(0, len(conselhos) - 1)
         conselho_aleatorio = conselhos[indice_aleatorio]
-        print(conselho_aleatorio)
+        return conselho_aleatorio
 

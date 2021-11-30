@@ -42,18 +42,26 @@ class SistemaChatBot:
         return escolha
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 
+    def adiciona_nome_do_bot_na_mensagem(self, mensagem):
+        mensagem_com_nome = self.__bot.nome + " diz: " + mensagem
+        return mensagem_com_nome
+
+    def imprimir_mensagem_com_nome_do_bot(self, mensagem):
+        mensagem_com_nome = self.adiciona_nome_do_bot_na_mensagem(mensagem)
+        print(mensagem_com_nome)
+
     def inicio(self):
         self.boas_vindas()
         self.mostra_menu()
         self.escolhe_bot()
-        print(self.__bot.boas_vindas())
+        self.imprimir_mensagem_com_nome_do_bot(self.__bot.boas_vindas())
         while True:
             self.mostra_comandos_bot()
             escolha = self.le_envia_comando()
             if escolha == "-1":
                 break
 
-        print(self.__bot.despedida())
+        self.imprimir_mensagem_com_nome_do_bot(self.__bot.despedida())
         ##mostra mensagem de boas-vindas do sistema
         ##mostra o menu ao usuário
         ##escolha do bot

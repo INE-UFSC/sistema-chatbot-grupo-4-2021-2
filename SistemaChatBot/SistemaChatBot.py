@@ -18,7 +18,7 @@ class SistemaChatBot:
     def escolhe_bot(self):
         ##faz a entrada de dados do usuário e atribui o objeto ao atributo __bot 
         escolha = input('Escolha um dos bots: ')
-        while not self.__check_input_in_range(1, len(self.__lista_bots) - 1, escolha):
+        while not self.__check_input_in_range(1, len(self.__lista_bots), escolha):
             print('Valor não aceito, tente novamente')
             escolha = input('Escolha um dos bots: ')
         self.__bot = self.__lista_bots[int(escolha) - 1]

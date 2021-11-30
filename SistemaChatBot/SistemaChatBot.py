@@ -12,7 +12,9 @@ class SistemaChatBot:
 
     def mostra_menu(self):
         for i in range(len(self.__lista_bots)):
-            print(f'{i + 1}) Escolher bot {self.__lista_bots[i].nome} mensagem de apresentação: {self.__lista_bots[i].boas_vindas()}')
+            print(f'{i + 1}) Escolher bot {self.__lista_bots[i].nome} mensagem de apresentação:', end='')
+            self.__bot.boas_vindas()
+            print()
         ##mostra o menu de escolha de bots
     
     def escolhe_bot(self):

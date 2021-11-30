@@ -1,4 +1,5 @@
 from Bots.Bot import Bot
+from random import randint
 
 class BotCansado(Bot):
     def __init__(self,nome):
@@ -29,4 +30,18 @@ class BotCansado(Bot):
     def despedida(self):
         mensagem = "Foi um prazer. Volte sempre."
         print(mensagem)
+    
+    def mostra_conselho(self):
+        conselhos = (
+                "Estude ao menos 1 hora por dia.",
+                "Programe computador todos os dias",
+                "Faça ao menos 30 minutos de atividade física por dia.",
+                ("Mantenha uma alimentação saudável com frutas, legumes e"
+                    + " vegetais todos os dias."),
+                ("Use máscara para impedir a propagação de epidemias"
+                    + " respiratórias.")
+                )
+        indice_aleatorio = randint(0, len(conselhos) - 1)
+        conselho_aleatorio = conselhos[indice_aleatorio]
+        print(conselho_aleatorio)
 

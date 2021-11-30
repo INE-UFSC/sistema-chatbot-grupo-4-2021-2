@@ -22,8 +22,9 @@ class BotCansado(Bot):
     def executa_comando(self,cmd):
         pass
 
-    def boas_vindas(self):
-        pass
+    def boas_vindas_Cansado(self):
+        mensagem = "Seja bem-vindo(a)."
+        print(mensagem)
 
     def despedida(self):
         pass

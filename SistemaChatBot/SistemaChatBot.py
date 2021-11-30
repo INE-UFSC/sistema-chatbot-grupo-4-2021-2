@@ -35,7 +35,10 @@ class SistemaChatBot:
 
     def le_envia_comando(self):
         escolha = input('Escolha alguma opção: ').strip()
-        print(self.__bot.executa_comando(escolha))
+        tem_comando_de_sair = escolha == "-1"
+        if not tem_comando_de_sair:
+            mensagem = self.__bot.executa_comando(escolha)
+            self.imprimir_mensagem_com_nome_do_bot(mensagem)
         return escolha
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 

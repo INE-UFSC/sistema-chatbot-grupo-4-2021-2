@@ -10,8 +10,8 @@ class BotLegal(Bot):
         return self.__nome
 
     @nome.setter
-    def nome(nome):
-        self.__nome= nome
+    def nome(self, novo):
+        self.__nome = novo
 
     def apresentacao(self):
         return "Olá! Eu sou o Bot Legal, podemos ser amigos?"

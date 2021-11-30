@@ -1,5 +1,4 @@
 from Bots.Bot import Bot
-
 class SistemaChatBot:
     def __init__(self,nomeEmpresa,lista_bots):
         self.__empresa=nomeEmpresa
@@ -35,7 +34,7 @@ class SistemaChatBot:
 
     def le_envia_comando(self):
         escolha = input('Escolha alguma opção: ').strip()
-        self.__bot.executa_comando(escolha)
+        print(self.__bot.executa_comando(escolha))
         return escolha
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 
@@ -44,15 +43,16 @@ class SistemaChatBot:
         self.mostra_menu()
         self.escolhe_bot()
         print(self.__bot.boas_vindas())
-        tem_que_continuar = True
-        while tem_que_continuar:
+        while True:
             self.mostra_comandos_bot()
             escolha = self.le_envia_comando()
-            tem_que_continuar = escolha != '-1'
+            if escolha == "-1":
+                break
+
         print(self.__bot.despedida())
         ##mostra mensagem de boas-vindas do sistema
         ##mostra o menu ao usuário
-        ##escolha do bot      
+        ##escolha do bot
         ##mostra mensagens de boas-vindas do bot escolhido
         ##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
         ##ao sair mostrar a mensagem de despedida do bot

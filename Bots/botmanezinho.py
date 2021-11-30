@@ -23,22 +23,31 @@ class BotManezinho(Bot):
     def apresentacao(self):
         return f"Ó-lhó-lhó, me chamo {self.__nome}. Quex conversar comigo?"
 
+    def mostra_comandos(self):
+        numero_de_comandos = len(self.__comandos)
+        mensagem = ""
+        for numero in self.__comandos.keys():
+            mensagem += f"{numero}"
+            mensagem += '\n'
+        return(mensagem)
+
     def executa_comando(self,cmd):
+        cmd = int(cmd)
         try:
             if cmd == 1:
-                print(self.comandos["Ô meu querido, quesh saber quantas praias existem na nossa linda ilha da magia?"])
+                return self.comandos["Ô meu querido, quesh saber quantas praias existem na nossa linda ilha da magia?"]
             elif cmd == 2:
-                print(self.comandos["Essa é complicada, Avaí ou Figueira?"])
+                return self.comandos["Essa é complicada, Avaí ou Figueira?"]
             elif cmd == 3:
-                print(self.comandos["Mofas com a pomba na balaia?"])
+                return self.comandos["Mofas com a pomba na balaia?"]
             elif cmd == 4:
-                print(self.comandos["O que é bucica?"])
+                return self.comandos["O que é bucica?"]
 
         except:
-            print("Uhhh seu tanso! Não é assim não, pô!")
+            return "Uhhh seu tanso! Não é assim não, pô!"
 
     def boas_vindas(self):
         return f"Me excolhesse mesmo, és um baita, feio!"
 
     def despedida(self):
-        print("Valeu pelo papo, nego, dazumbanho! Agora segue reto toda vida que eu vou me ajojar aqui")
+        return "Valeu pelo papo, nego, dazumbanho! Agora segue reto toda vida que eu vou me ajojar aqui"

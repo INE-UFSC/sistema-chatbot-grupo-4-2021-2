@@ -27,4 +27,6 @@ class BotCansado(Bot):
         print(mensagem)
 
     def despedida(self):
-        pass
+        mensagem = "Foi um prazer. Volte sempre."
+        print(mensagem)
+

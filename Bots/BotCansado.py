@@ -40,7 +40,7 @@ class BotCansado(Bot):
         elif cmd == "3":
             self.despedida()
 
-    def boas_vindas_Cansado(self):
+    def boas_vindas(self):
         mensagem = "Seja bem-vindo(a)."
         print(mensagem)
 

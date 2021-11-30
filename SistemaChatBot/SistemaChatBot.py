@@ -51,7 +51,7 @@ class SistemaChatBot:
             self.mostra_comandos_bot()
             escolha = self.le_envia_comando()
             tem_que_continuar = escolha != '-1'
-        print(self.__bot.despedida())
+        self.__bot.despedida()
         ##mostra mensagem de boas-vindas do sistema
         ##mostra o menu ao usuário
         ##escolha do bot      

@@ -39,6 +39,10 @@ class SistemaChatBot:
         return escolha
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 
+    def adiciona_nome_do_bot_na_mensagem(self, mensagem):
+        mensagem_com_nome = self.__bot.nome + " diz: " + mensagem
+        return mensagem_com_nome
+
     def inicio(self):
         self.boas_vindas()
         self.mostra_menu()
